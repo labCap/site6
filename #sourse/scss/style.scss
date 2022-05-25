@@ -1,0 +1,380 @@
+@import 'rem';
+@import 'canvas';
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+body {
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+}
+
+a {
+    color: #3c3c3c;
+    font-size: 16px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+#canvas-basic {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 1080px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -10;
+}
+
+.container {
+    max-width: 1100px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    // // display: flex;
+    // background: linear-gradient(70deg, #3f7dff, #ffc0cb);
+    // background-image: url(../img/bg-header.png) no-repeat center;
+
+    &__inner {
+        padding: 0 0 120px 0;
+    }
+
+    &__logo {
+
+        padding: 165px 0;
+    }
+
+    &__text {
+        padding: 0 0 275px 0;
+        line-height: 40px;
+        color: #fff;
+
+
+        &:after {
+            content: '';
+            position: absolute;
+            width: 105px;
+            height: 2px;
+            left: 50%;
+            background-color: #fff;
+            margin: 40px 0px 0px -51px;
+        }
+    }
+
+    &__title {
+        font-size: 34px;
+        font-weight: 900;
+
+        letter-spacing: 8px;
+        text-transform: uppercase;
+        position: relative;
+        text-align: center;
+        padding: 0px 0px 30px 0px;
+
+
+    }
+
+    &__subtitle {
+        letter-spacing: 4px;
+        font-size: 26px;
+    }
+
+    &__btn a {
+        padding: 15px 40px;
+        border: 1px solid #fff;
+        color: #fff;
+    }
+
+    &__btn a:hover {
+        background: #ffffff3b;
+    }
+
+    &__arrow {
+        padding-top: 70px;
+    }
+}
+
+.menu {
+    border-bottom: 1px solid #f2f2f2;
+
+
+    &__inner {
+        padding: 20px 0;
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    &__list a {
+        font-weight: 700;
+        font-size: 15px;
+
+    }
+
+    &__list a:hover {
+        color: #ada074;
+
+    }
+}
+
+.about {
+
+
+    &__top {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 0 55px 0;
+    }
+
+    &__title {
+        padding: 130px 0 70px 0;
+    }
+
+    &__description {
+        width: 690px;
+    }
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 0 95px 0;
+    }
+}
+
+
+
+.title {
+    font-weight: 700;
+    font-size: 34px;
+    text-align: center;
+
+    &:after {
+        content: '';
+        position: absolute;
+        width: 70px;
+        height: 2px;
+        left: 50%;
+        background-color: #000;
+        margin: 59px 0px 0px -33px;
+    }
+}
+
+.description {
+    color: #9d9d9d;
+    text-align: center;
+}
+
+.about-item {
+    max-width: 285px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__img {
+        max-width: 90px;
+        max-height: 90px;
+        padding: 30px;
+        border-radius: 50px;
+        border: 2px solid #f0f0f0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__title {
+        font-size: 22px;
+        text-transform: uppercase;
+        padding: 40px 0;
+    }
+
+}
+
+.portfolio {
+    background: #f3f3f3;
+    padding: 105px 0 60px 0;
+    text-align: center;
+
+    &__menu {
+        padding: 90px 0 135px 0;
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0 0 60px 0;
+    }
+
+    &__btn a {
+        padding: 15px 40px;
+        border: 1px solid #000;
+        color: #000;
+    }
+
+    &__btn a:hover {
+        background: #4949493b;
+    }
+}
+
+
+.portfolio-item {
+    background: url(../img/cat1.jpg) center;
+    width: 520px;
+    height: 360px;
+    margin: 15px 15px 15px 0;
+    border-radius: 20px
+}
+
+.portfolio-item:hover {
+    box-shadow: 0px 2px 30px 5px #0000002e;
+}
+
+
+
+.partners {
+    text-align: center;
+    background: linear-gradient(70deg, #001bff, #ff6ff2);
+
+    &__inner {
+        padding: 100px 0 100px 0;
+    }
+
+    &__title {
+        font-weight: 300;
+        font-size: 33px;
+        color: #fff;
+    }
+
+    &__box-img {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 100px 0 0 0;
+    }
+
+}
+
+.contact {
+    padding: 185px 0 0 0;
+
+    &__inner {
+        padding: 180px 0 100px 0;
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    &__form {
+        max-width: 380px;
+        height: 350px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__form-title {
+        font-weight: 700;
+        font-size: 14px;
+        padding: 0 0 20px 0;
+    }
+
+    &__form input,
+    &__form textarea {
+        border-top: 1px solid #000;
+        background-color: #f8f7f7;
+        padding: 10px;
+    }
+
+    &__form input {
+        width: 160px;
+        height: 35px;
+
+    }
+
+    &__form textarea {
+        width: 380px;
+        height: 120px;
+        resize: none;
+    }
+
+    &__form button {
+        height: auto;
+        display: flex;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        background-color: transparent;
+        margin-left: auto;
+    }
+
+    &__text {
+        width: 285px;
+        padding: 0 15px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    &__text1 {
+        padding: 0 0 40px 0;
+    }
+
+    &__text2-title {
+        padding: 0 0 20px 0;
+        font-weight: 700;
+    }
+
+    &__text2-img {
+        display: flex;
+    }
+
+    &__text2-img img {
+        padding: 0 16px 10px 0;
+    }
+
+    &__text2-email span {
+        font-weight: 700;
+    }
+}
+
+.footer {
+    background-color: #3c3c3c;
+    text-align: center;
+
+    &__inner {
+        padding: 50px 0;
+    }
+
+    &__menu {
+        padding: 40px 0 30px;
+        // display: flex;
+        // justify-content: center;
+    }
+
+    &__menu-list {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+
+    &__menu-list a {
+        color: #a4a4a4;
+    }
+
+    &__menu-list a:hover {
+        color: #ada074;
+    }
+
+    &__text {
+        color: #6c6c6c;
+    }
+}
