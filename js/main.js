@@ -10,8 +10,8 @@ var granimInstance = new Granim({
                 ['#3f7dff', '#ffc0cb'],
                 ['#ff6ff2', '#001bff'],
                 ['#3b46a6', '#bb1aad'],
-                ['#87d6f4', '#e8009d'],
-                ['#61045F', '#9d87f4']
+                ['#e8009d', '#87d6f4'],
+                ['#9d87f4', '#61045F']
                 
             ]
         }
